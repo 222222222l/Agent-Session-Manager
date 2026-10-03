@@ -48,7 +48,7 @@ if (command === 'fetch') {
     const dir = path.join('upstream', repo.name);
     let present = true; try { await access(dir); } catch { present = false; }
     if (!present) {
-      git(['clone', '--filter=blob:none', '--no-checkout', repo.url, dir]);
+      git(['clone', '--config', 'core.autocrlf=false', '--config', 'core.eol=lf', '--filter=blob:none', '--no-checkout', repo.url, dir]);
       git(['-C', dir, 'checkout', '--detach', repo.commit]);
     }
     // Never reset a pre-existing checkout or discard user edits.

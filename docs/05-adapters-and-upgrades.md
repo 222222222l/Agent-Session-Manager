@@ -75,6 +75,8 @@ npm run upstream:verify
 
 `fetch` 只创建缺失 checkout 并检出锁定提交；对已有 checkout 不执行 reset、不丢弃改动。`verify` 检查已存在 checkout 的 HEAD、选取文件哈希、许可证副本和 txcript 安装版本。运行无需下载上游，因此 CI 可只用已保存的选取文件。
 
+`.gitattributes` 为自有文本固定 LF，并为 `vendor/` 禁用换行转换，确保各平台验证同一份原始字节。`fetch` 创建参考 checkout 时也关闭 Git 自动 CRLF 转换。不要通过更改锁定哈希来掩盖换行变动；已有参考 checkout 如受本机 Git 配置影响，先检查配置和本地改动，再获取新副本。
+
 升级步骤：
 
 1. 在参考 checkout 中获取拟采用的新版本，查看相关源文件、许可证和变更记录；已有副本与端到端样本先保留。
@@ -89,6 +91,6 @@ Node 核心不依赖上游的完整 UI／数据层，因此不需要跟随三套
 
 已在 Linux、Node 22.22.3 上运行类型构建、集成测试、上游校验和合成数据 CLI 演示。测试入口直接运行 Node test 文件，避免依赖子进程隔离；当前受限环境禁止 Node spawn，CLI 用同一命令处理函数测试，并另行运行实际入口。
 
-已提供 Windows／macOS／Linux × Node 22／24 CI 配置，尚未在远端执行，不能宣称三平台实机认证。测试不会自动读取真实个人会话。Node 22 的 SQLite 实验性提示保留在 stderr。
+已提供 Windows／macOS／Linux × Node 22／24 CI 配置，远端运行结果见 [GitHub Actions](https://github.com/222222222l/Agent-Session-Manager/actions/workflows/check.yml)。CI 验证合成数据流程，不代表真实 IDE 集成均已验收。测试不会自动读取真实个人会话。Node 22 的 SQLite 实验性提示保留在 stderr。
 
 下一步优先：Gemini JSONL 适配、Cursor 一致性 SQLite 捕获、多文件附件清单、重建／项目映射、分页读取和后台索引。完成这些数据边界后，再接 Tauri 桌面与已验证的原生恢复流程。

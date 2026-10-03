@@ -1,0 +1,5 @@
+# Keep source and documentation checkouts consistent across operating systems.
+* text=auto eol=lf
+
+# Provenance hashes cover the original bytes, including line endings.
+vendor/** -text
