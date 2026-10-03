@@ -1,0 +1,19 @@
+{
+  "name": "agent-session-manager",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, evidence-preserving agent session library and CLI",
+  "engines": { "node": ">=22.16.0 <23 || >=24.0.0" },
+  "exports": { ".": { "types": "./dist/src/index.d.ts", "import": "./dist/src/index.js" } },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node dist/test/integration.test.js",
+    "asm": "node dist/src/cli.js",
+    "demo": "npm run build && node scripts/demo.mjs",
+    "upstream:verify": "node scripts/upstreams.mjs verify",
+    "upstream:fetch": "node scripts/upstreams.mjs fetch"
+  },
+  "dependencies": { "txcript": "0.14.4" },
+  "devDependencies": { "@types/node": "22.15.30", "typescript": "5.9.3" }
+}

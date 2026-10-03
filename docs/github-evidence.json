@@ -1,0 +1,112 @@
+{
+  "checked_on": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "method": "GitHub REST metadata; README and selected source inspection; no product runtime qualification",
+  "note": "pushed_at is repository activity, not a stability guarantee; null release is an unverified lookup, not proof that no release exists",
+  "repositories": [
+    {
+      "repository": "Dicklesworthstone/coding_agent_session_search",
+      "url": "https://github.com/Dicklesworthstone/coding_agent_session_search",
+      "stars": 1159,
+      "pushed_at": "2026-10-03T09:51:52Z",
+      "archived": false,
+      "license_api": "NOASSERTION",
+      "head_sha": "306d6e254de767918db41b7f4f28839a77e40932",
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/Dicklesworthstone/coding_agent_session_search"
+    },
+    {
+      "repository": "Gregor-von-Vitek/agent-sessions-sync",
+      "url": "https://github.com/Gregor-von-Vitek/agent-sessions-sync",
+      "stars": 2,
+      "pushed_at": "2026-07-16T13:58:52Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": null,
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/Gregor-von-Vitek/agent-sessions-sync"
+    },
+    {
+      "repository": "aaaAlexanderaaa/cchistory",
+      "url": "https://github.com/aaaAlexanderaaa/cchistory",
+      "stars": 16,
+      "pushed_at": "2026-07-26T15:17:22Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": null,
+      "release_tag_observed": "v0.3.0",
+      "release_published_at": "2026-07-02T07:31:17Z",
+      "release_status": "observed",
+      "metadata_source": "https://api.github.com/repos/aaaAlexanderaaa/cchistory"
+    },
+    {
+      "repository": "farion1231/cc-switch",
+      "url": "https://github.com/farion1231/cc-switch",
+      "stars": 139707,
+      "pushed_at": "2026-10-03T12:32:17Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": "793e67d9b3210eb527e7d36f2c866a56fae9dec7",
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/farion1231/cc-switch"
+    },
+    {
+      "repository": "jazzyalex/agent-sessions",
+      "url": "https://github.com/jazzyalex/agent-sessions",
+      "stars": 889,
+      "pushed_at": "2026-10-02T22:14:50Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": null,
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/jazzyalex/agent-sessions"
+    },
+    {
+      "repository": "rush-skills/sessionvault",
+      "url": "https://github.com/rush-skills/sessionvault",
+      "stars": 2,
+      "pushed_at": "2026-08-15T01:32:02Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": null,
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/rush-skills/sessionvault"
+    },
+    {
+      "repository": "skillsynchq/txcript",
+      "url": "https://github.com/skillsynchq/txcript",
+      "stars": 148,
+      "pushed_at": "2026-09-29T03:01:30Z",
+      "archived": false,
+      "license_api": "Apache-2.0",
+      "head_sha": "8cd3b0e63f797b1531a14197f41a0e9eeedec8c6",
+      "release_tag_observed": "v0.14.4",
+      "release_published_at": "2026-09-13T23:41:24Z",
+      "release_status": "observed",
+      "metadata_source": "https://api.github.com/repos/skillsynchq/txcript"
+    },
+    {
+      "repository": "vineethkrishnan/agent-sessions",
+      "url": "https://github.com/vineethkrishnan/agent-sessions",
+      "stars": 2,
+      "pushed_at": "2026-09-07T15:36:39Z",
+      "archived": false,
+      "license_api": "MIT",
+      "head_sha": null,
+      "release_tag_observed": null,
+      "release_published_at": null,
+      "release_status": "not_verified_endpoint_fetch_failed",
+      "metadata_source": "https://api.github.com/repos/vineethkrishnan/agent-sessions"
+    }
+  ]
+}

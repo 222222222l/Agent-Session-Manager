@@ -1,0 +1,16 @@
+node_modules/
+dist/
+upstream/
+.cache/
+.asm/
+.demo/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

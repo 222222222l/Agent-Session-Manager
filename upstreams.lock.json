@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "repositories": [
+    {
+      "name": "cc-switch",
+      "url": "https://github.com/farion1231/cc-switch.git",
+      "commit": "793e67d9b3210eb527e7d36f2c866a56fae9dec7",
+      "license": "MIT",
+      "licenseSha256": "912b6a597d10c43b40a0909349ed95b052b17efb6502b4898e1b35dafb896755"
+    },
+    {
+      "name": "cchistory",
+      "url": "https://github.com/aaaAlexanderaaa/cchistory.git",
+      "commit": "36d209ec878020d80861884a07dfc8217be4461a",
+      "license": "MIT",
+      "licenseSha256": "d4823f9936064b77c714a456b8ab62bf030d6b8a884d176bb9fdc0add0222456"
+    },
+    {
+      "name": "txcript",
+      "url": "https://github.com/skillsynchq/txcript.git",
+      "commit": "8cd3b0e63f797b1531a14197f41a0e9eeedec8c6",
+      "license": "Apache-2.0",
+      "licenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "files": [
+    {
+      "repository": "cchistory",
+      "upstreamPath": "packages/source-adapters/src/platforms/claude-code.ts",
+      "localPath": "vendor/cchistory/claude-code.ts",
+      "mode": "verbatim",
+      "sha256": "c92bd9987bba154cdbd29fc5def098cbd3ff273aca3ed27383147d20279108a7"
+    },
+    {
+      "repository": "cchistory",
+      "upstreamPath": "packages/source-adapters/src/platforms/codex.ts",
+      "localPath": "vendor/cchistory/codex.ts",
+      "mode": "verbatim",
+      "sha256": "7c6105e6b1ca91f21424528a3228b68b462b262dd85a5ba6b66a5ad172b79d49"
+    },
+    {
+      "repository": "cchistory",
+      "upstreamPath": "packages/source-adapters/src/platforms/gemini.ts",
+      "localPath": "vendor/cchistory/gemini.ts",
+      "mode": "verbatim",
+      "sha256": "f31e35604b9e9fdeb87dc54f56b00b749128ef8839921f0154bde68f639a1d86"
+    },
+    {
+      "repository": "cc-switch",
+      "upstreamPaths": [
+        "src-tauri/src/session_manager/providers/gemini.rs",
+        "src-tauri/src/session_manager/providers/utils.rs",
+        "src-tauri/src/session_manager/providers/claude.rs",
+        "src-tauri/src/session_manager/providers/codex.rs"
+      ],
+      "localPath": "vendor/cc-switch/session.ts",
+      "mode": "typescript-port",
+      "note": "Explicit diagnostics, retained unknown records, argv-only resume; reviewed local adaptation"
+    }
+  ],
+  "runtime": {
+    "txcript": {
+      "version": "0.14.4",
+      "source": "npm",
+      "integrity": "sha512-ETa19Sb6I0NT89hnUz+3y9Oodlz0SgSmhlbIb8u2ViFqfmA/NLlk2equpPQBcRYTdmhK4wUsMobAFhmyU2nTkQ==",
+      "note": "Published WASM; HEAD and release feature inventories may differ"
+    }
+  }
+}
