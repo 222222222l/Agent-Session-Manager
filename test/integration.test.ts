@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test, type TestContext } from 'node:test';
-import { mkdtemp, mkdir, writeFile, readFile, rm, symlink, readdir } from 'node:fs/promises';
+import { mkdtemp, mkdir, writeFile, readFile, rm, symlink, readdir, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { runCli } from '../src/cli-main.js';
@@ -258,10 +258,11 @@ test('failed publication cleans its reservation and preserves other existing dat
 });
 test('source symlinks are not followed and a source cannot overlap the manager store', async t => {
   const c = await setup(t); const outside = path.join(c.root, 'outside.jsonl'); await writeFile(outside, claude());
+  assert.equal(c.store.root, await realpath(path.join(c.root, 'store')));
+  await assert.rejects(c.manager.scan({ id: 'overlap', adapterId: 'claude_code', root: c.root }), /contain/);
   try { await symlink(outside, path.join(c.source, 'linked.jsonl')); }
   catch (error) { if ((error as NodeJS.ErrnoException).code === 'EPERM') { t.skip('Host cannot create symlinks'); return; } throw error; }
   assert.equal((await c.manager.scan({ id: 'links', adapterId: 'claude_code', root: c.source })).captured, 0);
-  await assert.rejects(c.manager.scan({ id: 'overlap', adapterId: 'claude_code', root: c.root }), /contain/);
 });
 test('CLI contract gives nonzero status for parse failures and reports actual results', async t => {
   const c = await setup(t);

@@ -11,7 +11,9 @@ export class SessionStore {
   constructor(root: string) {
     if (existsSync(path.join(root, '.asm-incomplete'))) throw new Error('Incomplete publication; do not open as a manager store');
     mkdirSync(root, { recursive: true, mode: 0o700 });
-    this.root = realpathSync(root);
+    // Match fs.promises.realpath used by scanning; the JS fallback can retain
+    // Windows 8.3 aliases and make one directory appear to be two distinct roots.
+    this.root = realpathSync.native(root);
     const file = path.join(this.root, 'index.sqlite');
     if (existsSync(file) && lstatSync(file).isSymbolicLink()) throw new Error('Index must not be a symlink');
     this.db = new DatabaseSync(file);
